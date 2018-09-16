@@ -1,0 +1,17 @@
+<%= form_for @users, :url => {:action => 'update'} do |f| %>
+<div>
+  <%= f.label(:email, "メール") %>
+  <%= f.text_field :email %>
+</div>
+
+<div>
+  <%= f.label(:encrypted_password, "パスワーど") %>
+  <%= f.text_field :encrypted_password %>
+</div>
+
+<div>
+  <%= f.submit "修正完了"%>
+</div>
+<% end %>
+
+<%= link_to "戻る", home_index_path %>
